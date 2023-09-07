@@ -10,3 +10,5 @@ Make you node machines beefy. So all weights as small as they can be still fit.
 And finally do the right things to bench on target hardware.
 Follow Parity official guidelines and explanation on why and how to bench.
 
+To safe wasted codespace and speed up checking benchamrks, make sure these run with pallet tests okey.
+
