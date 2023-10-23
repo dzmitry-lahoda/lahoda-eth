@@ -19,7 +19,9 @@ Is set `G` with `*` is called `group` if it is `closed`, `associative`(with `ide
 If `commutative``
 
 
-## Group Hylomorphism
+## Group Homomorphism
+
+
 
 G, *
 H, x
@@ -31,8 +33,28 @@ f(x * y) = f(x) \cdot f(y)
 $$
 
 
-if $e_G$ then $ \phi(e_H) = e_H $
+if $e_G$ then $ \phi(e_G) = e_H $
 
 if $ a^{-1} in G  => \phi(a^{-1}) = \phi(a)^{-1} $  in H  
+
+
+### Isomorphism
+
+If homomorphism is bijection
+
+Writing Proofs | Contrapositive
+
+### Endomorphism
+
+Is group homomorphism to itself
+
+### Automorphism
+
+Iso to self
+
+
+### Subgroup
+
+$H \subseteq (G, \cdot)$ and H is closed under $\cdot$ then it is group and subgroup of G
 
 
