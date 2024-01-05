@@ -3,32 +3,41 @@ import numpy as np
 
 points = 5 # A P1 P2 P3 B
 
-D  = np.zeros((points, points))
+max = 1000000000000000
 
-print(D)
+D  = np.full((points, points), max)
 
-# capital = cp.Variable(3)
+D[0,1] = 2
+D[0,2] = 7
+D[1,2] = 10
+D[2,1] = 10
+D[1,4] = 30
+D[2,3] = 8
+D[3,4] = 5
 
-# total = 100000
+X = cp.Variable((points, points), boolean=True)
 
-# constrains = [
-#     sum(capital) == 100000,
-#     capital[1] <= 0.2*100000,
-#     capital[2] <= 0.1*100000,
-#     ]
+expression = cp.multiply(X, D)
 
+print(expression)
 
-# objective = cp.Maximize(0.05*capital[0] + 0.1*capital[1] + 0.12*capital[2])
+objective = cp.Minimize(cp.sum(expression))
+print(objective)
 
-# problem = cp.Problem(objective, constrains)
+constrains = [
+     sum (X[0,:]) == 1,
+     sum(X[:,4]) == 1,
+     ]
 
-# result = problem.solve()
+for i in range(points):
+        constrains.append(sum(X[i,:]) == sum(X[:,i]))   
 
-# print(problem.status)
-# print(problem.value)
-# print(problem)
-# print(capital.value)
-# print(constrains[0].dual_value)
-# print(constrains[1].dual_value)
-# print(constrains[2].dual_value)
-# print(constrains)
+problem = cp.Problem(objective, constrains)
+
+result = problem.solve()
+
+print(problem)
+print("problem.status: ", problem.status)
+print("result: ", result)
+print("problem.value:",  problem.value)
+print(X.value)
