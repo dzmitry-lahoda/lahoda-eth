@@ -11,7 +11,7 @@ objective = cp.Minimize((x-y)**2)
 
 problem = cp.Problem(objective, constraints)    
 
-problem.solve()any
+problem.solve()
 
 print(problem.status)
 print("optimal value", problem.value)

@@ -12,7 +12,7 @@ problem = cp.Problem(objective, [])
 result = problem.solve()
 
 objective = cp.Minimize(cp.sum_squares(A @ x - b))
-constraints = [ 0 <= x, x <= 1]
+constraints = [] # [ 0 <= x, x <= 1]
 problem = cp.Problem(objective, constraints)
 result = problem.solve()
 
