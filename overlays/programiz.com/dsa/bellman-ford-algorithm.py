@@ -44,3 +44,5 @@ edges[(2,3)] = -1
 edges[(3,1)] = -1
 any_to_any, routes = search(0, edges)
 print(f"0 to any: {any_to_any}; routes: {routes}")
+
+
