@@ -1,0 +1,4 @@
+- ask jeff about gov deploy
+- ask dhruv if he clear, describe why we are here
+- ask michal if he reviewed
+- ask blas/vlad about requirments of indexer

@@ -7,7 +7,6 @@ Stakers(S) grand slashing permissions to EL on staked amount.
 
 Actively Validating Service(AVS) A bring proofs outside of consensus.
 
-
 Core flow is:
 
 1. Validator V delegate staking to EL
