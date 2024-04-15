@@ -16,3 +16,5 @@ Semigroup is associative Magma.
 Monoid is Semigroup with Idenity element
 
 Group is Monoid with inverse for each element.
+
+Abelian if commutative (not sensitive to order).
