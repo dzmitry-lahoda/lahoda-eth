@@ -10,4 +10,9 @@ Index price is realtime price, aggregated over several exchanges. Used for stop 
 
 Mid market prices is mid amid current bid and ask.
 
-Funding rate is interest payed to longs or shorts.
+
+Funding rate is interest % payed to longs or shorts.
+Positive means price of mid is above oracle/index, means long pay shorts.
+Opposite is true.
+
+Notional value is value of position in USD, leveraged.
