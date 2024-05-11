@@ -15,3 +15,13 @@ HX - Helix editor
 11. text diff 2 files
 12. semantic diff 2 files
 13. solve git conflict using 2 files
+
+### Accept changes in diff
+
+
+
+type quit = `:q` | `:quit:` = `closer current view` | `close` | `ctrl+f4` | `exit`
+
+type force_quit = (quit, `!`) with `i` = ignore unsaved changes
+
+type open = `:o` | `:open` = open file into current view
