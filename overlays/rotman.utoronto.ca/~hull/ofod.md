@@ -16,10 +16,46 @@ Restructuring allow to compress underlying principal with retaining same positio
 Underlying principal is value controlled by position,
 while transaction value is less.
 
-Forward contract has one long party and one short party.
+## Forward contract:
+
+- has one long party and one short party.
+- is obligation for both parties
+ 
+Neutralizes risk by fixing price.
 
 Long is agreed to buy, and long agreed to sell.
+Longs and shorts derivative, not underlying.
 
 Future contract is standard forward.
 
 If more investors want to go long price up, if go short price is down.
+
+
+
+## Options
+
+Call to buy at certain price at certain date.
+Put to sell at certain price at certain date.
+
+Participants:
+
+| |puts|calls|
+|-|-|-|
+|seller||
+|bayer||
+
+Insurance to neutralize risk and possibly get profit.
+
+## Comparison
+
+|contract|payment|leverage|loss|
+|-|-|-|-|
+|options|upfront|yes|buy limited, sell unlimited|
+|forwards|no|yes|both unlimited|
+
+
+## Traders
+
+- Hedgers avoid exposure from adverse movements
+- Speculators
+- Arbitrageurs
