@@ -1,11 +1,12 @@
 
+## Chapter 1
+
+Did Pracice questions 1.11-1.13
 
 $$
 \\ derivatives = \{ swap,\ option,\ forward contract,\  }
-\\ {forward contract} = \text{agreement to buy or sell assets at certain date at certain price}
-\\ {payoff}_{long} = S_k - K
-\\ {payoff}_{short} = K - S_k 
 $$
+
 
 Derivative requires two parties agree on future transaction.
 
@@ -16,7 +17,7 @@ Restructuring allow to compress underlying principal with retaining same positio
 Underlying principal is value controlled by position,
 while transaction value is less.
 
-## Forward contract:
+### Forward contract:
 
 - has one long party and one short party.
 - is obligation for both parties
@@ -30,31 +31,45 @@ Future contract is standard forward.
 
 If more investors want to go long price up, if go short price is down.
 
+$$
+\\ {forward contract} = \text{agreement to buy or sell assets at certain date at certain price}
+\\ K = \text{future price}
+\\ S_k=\text{strike price}
+\\ {payoff}_{long} = S_k - K
+\\ {payoff}_{short} = K - S_k 
+$$
 
 
-## Options
+### Options
 
 Call to buy at certain price at certain date.
 Put to sell at certain price at certain date.
 
 Participants:
 
-| |puts|calls|
-|-|-|-|
-|seller||
-|bayer||
+| party  | calls                            | puts                             |
+|--------|----------------------------------|----------------------------------|
+| seller | profit from underlying goes down | profits from underlying goes up  |
+| bayer  | profits from underlying goes up  | profit from underlying goes down |
 
 Insurance to neutralize risk and possibly get profit.
 
-## Comparison
 
-|contract|payment|leverage|loss|
-|-|-|-|-|
-|options|upfront|yes|buy limited, sell unlimited|
-|forwards|no|yes|both unlimited|
+$$
+\\ payoff_{call option seller}=min(0, K - S_t)=-max(S_t-K,0)
+\\ payoff_{call option buyer}=max(0, K - S_t)
+$$
 
 
-## Traders
+### Comparison
+
+| contract | payment | leverage | loss                        |
+|----------|---------|----------|-----------------------------|
+| options  | upfront | yes      | buy limited, sell unlimited |
+| forwards | no      | yes      | both unlimited              |
+
+
+### Traders
 
 - Hedgers avoid exposure from adverse movements
 - Speculators
