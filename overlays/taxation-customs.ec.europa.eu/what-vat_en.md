@@ -2,7 +2,7 @@
 
 SALES = GOODS and SERVICES
 
-Actor exports goods and servies outside of EU, pays zero VAT.
+Actor exports goods and services outside of EU, pays zero VAT.
 
 Imports are taxed by VAT.
 

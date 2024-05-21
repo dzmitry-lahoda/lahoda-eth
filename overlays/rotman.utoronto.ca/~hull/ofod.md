@@ -74,3 +74,18 @@ $$
 - Hedgers avoid exposure from adverse movements
 - Speculators
 - Arbitrageurs
+
+## Closing positions
+
+Means entering opposite trade to the original one.
+
+
+
+Initial margin - deposit on contact.
+
+Variation margin - variation of user margin.
+
+Maintaince margin lower than Initial Margin.
+
+
+Neutralizing contract - seeling contract  if variona margin not covered by owenr of positon to be on top of maintaince margin.
