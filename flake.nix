@@ -1,5 +1,5 @@
 {
-  description = "...";
+  description = "lahoda-eth";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
@@ -17,12 +17,11 @@
         {
           devShells = {
             default = pkgs.mkShell {
-              buildInputs = [
+              buildInputs = with pkgs; [
                 python
-                pkgs.virtualenv
-                pkgs.conda
-                pkgs.pyo3-pack
-
+                virtualenv                
+                pyo3-pack
+                lean4
               ];
 
               VIRTUALENV_PYTHON = "${python}/bin/python3";
