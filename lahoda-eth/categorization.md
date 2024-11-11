@@ -10,6 +10,9 @@ So your categories are just overlays.
 
 In case of category is new write here, until solid category arises.
 
+Strong pro overlay heuristic is that overlay is what essectiary you want to be merged to source.
+For example addition to Wikipedia are such.
+
 ## Leaf
 
 Write single leaf name as if it can be folder name.
