@@ -10,4 +10,9 @@ def nat_num: NatNum := (42 : Nat)
 
 abbrev NN := Nat
 
+structure Order where
+  limit: Nat
+  price: Nat
+deriving Repr
+
 #eval maximum 42 13
