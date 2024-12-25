@@ -4,12 +4,12 @@
 
 
 
-|        | Solve time | Verify time | Solve space | Verify Space | Examples |
-|--------|------------|-------------|-------------|--------------|----------|
-| P      | <=poly     | <=poly      |             |              |          |
-| NP     | any        | <=poly      |             |              |          |
-| PSPACE | any        | any         | <=poly      | <=poly       |          |
-| EXPSPACE       | any        | any         | any         | any          |          |
+|          | Solve time | Verify time | Solve space | Verify Space | Examples |
+|----------|------------|-------------|-------------|--------------|----------|
+| P        | <=poly     | <=poly      |             |              |          |
+| NP       | any        | <=poly      |             |              |          |
+| PSPACE   | any        | any         | <=poly      | <=poly       |          |
+| EXPSPACE | ∅          | ∅           | any         | any          |          |
 
 Exponential space leads to exponential time.
 
