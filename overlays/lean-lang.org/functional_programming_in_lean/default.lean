@@ -14,9 +14,9 @@ abbrev Size := Nat
 abbrev Price := Nat
 
 
-structure Limits where
-  size: Size
-  price: Price
+structure Limits (α : Type) (β: Type) where
+  size: α
+  price: β
 deriving Repr
 
 def Limits.reduceSize (l: Limits) (n: Size) : Limits :=
