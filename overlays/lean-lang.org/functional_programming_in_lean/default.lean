@@ -10,22 +10,43 @@ def nat_num: NatNum := (42 : Nat)
 
 abbrev NN := Nat
 
+abbrev Size := Nat
+abbrev Price := Nat
+
+
 structure Limits where
-  size: Nat
-  price: Nat
+  size: Size
+  price: Price
 deriving Repr
 
-def Limits.reduceSize (l: Limits) (n: Nat) : Limits :=
+def Limits.reduceSize (l: Limits) (n: Size) : Limits :=
   { l with size := l.size - n}
 
 structure Order where
-  limit: Nat
-  price: Nat
+  limit: Limits
+
 deriving Repr
 
+inductive FillMode where
+  | fillOrKill : FillMode
+  | immediateOrCancel : FillMode
+  | postOnly : FillMode
+  | limit : FillMode
 
 
+def is_immediate_or_cancel(f:FillMode): Bool :=
+  match f with
+    | FillMode.immediateOrCancel | FillMode.fillOrKill  => true
+    | _ => false
 
+
+inductive Side where
+  | buy : Side
+  | sell : Side
+
+def side := Side.buy
+
+#eval Nat.succ 42
 
 #eval maximum 42 13
 

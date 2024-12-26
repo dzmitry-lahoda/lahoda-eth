@@ -9,3 +9,9 @@ Allows to overload number literals to allow represent different branches of math
 Definitions which are unfolded are called `reducible`.
 
 Stuctures updated with lenses and support dot notation.
+
+Has inductive(recursive) and sum(tagged enumeration) types.
+
+Recursion can be only well-founded, non well founded errors.
+And requires manual proof of termination.
+
