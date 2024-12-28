@@ -19,12 +19,13 @@ structure Limits (α : Type) (β: Type) where
   price: β
 deriving Repr
 
-def Limits.reduceSize (l: Limits) (n: Size) : Limits :=
+
+
+def Limits.reduceSize (l: Limits Nat Nat) (n: Size) : Limits Nat Nat :=
   { l with size := l.size - n}
 
 structure Order where
-  limit: Limits
-
+  limit: Limits Nat Nat
 deriving Repr
 
 inductive FillMode where
@@ -40,14 +41,29 @@ def is_immediate_or_cancel(f:FillMode): Bool :=
     | _ => false
 
 
+def some_list := [1,2,3]
+
+def more_list := List.cons 1 some_list
+
 inductive Side where
   | buy : Side
   | sell : Side
 
 def side := Side.buy
 
+def x: Int := [].head!
+
+def List.last? {α : Type} (l: List α) : Option α :=
+  match l with
+    | [] => none
+    | [a] => some a
+    | h :: t => List.last? t
+
+
+#eval List.last? [1,2,3]
+
 #eval Nat.succ 42
 
 #eval maximum 42 13
 
-#eval ({ size := 42, price := 13: Limits }).reduceSize 2
+#eval ({ size := 42, price := 13: Limits Nat Nat }).reduceSize 2
