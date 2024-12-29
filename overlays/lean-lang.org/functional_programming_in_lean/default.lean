@@ -53,14 +53,11 @@ def side := Side.buy
 
 def x: Int := [].head!
 
-def List.last? {α : Type} (l: List α) : Option α :=
-  match l with
-    | [] => none
-    | [a] => some a
-    | h :: t => List.last? t
+def distributedProductOverSums (α: Type) (β: Type) (γ: Type) (i: α × (β ⊕ γ )) : (α × β) ⊕ (α × γ) :=
+ match i with
+  | (a, Sum.inl b) => Sum.inl (a, b)
+  | (a, Sum.inr b) => Sum.inr (a, b)
 
-
-#eval List.last? [1,2,3]
 
 #eval Nat.succ 42
 

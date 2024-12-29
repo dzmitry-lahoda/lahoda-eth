@@ -20,3 +20,7 @@ Lean has special notation for lists, like `[..]` and `::`.
 Can use some symbols in identifiers.
 
 Lean does not have throwing exception as part of language.
+
+`do` is used to model interaction with the world.
+
+Lean evaluates `IO` function, and returns them from main for execution.
