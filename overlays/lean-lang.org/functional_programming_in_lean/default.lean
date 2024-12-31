@@ -59,6 +59,32 @@ def distributedProductOverSums (α: Type) (β: Type) (γ: Type) (i: α × (β �
   | (a, Sum.inr b) => Sum.inr (a, b)
 
 
+-- this is same
+def propositonAndTheorem : (2 + 3 = 5) := rfl
+-- as this
+def Proposition : Prop := 2 + 3 = 5
+theorem justtheorem : Proposition := by
+  rfl
+-- ad as this
+theorem justtheorem2 : 2 + 3 = 5 := by
+  simp
+
+theorem HelloWorld: "Hello".append "World" == "HelloWorld" := by rfl
+
+theorem xxx: 5 < 17 := by
+  simp
+
+
+def refactor1 (x: Nat) (y) :=
+  y/ x + y + x - 2
+
+def refactor2 (x: Nat) (y) :=
+  y + x + y/ x - 2
+
+-- why cannot prove
+-- theorem xxxx : refactor1 = refactor2 := by
+--   simp
+
 #eval Nat.succ 42
 
 #eval maximum 42 13
