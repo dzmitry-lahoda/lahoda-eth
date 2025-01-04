@@ -85,6 +85,30 @@ def refactor2 (x: Nat) (y) :=
 -- theorem xxxx : refactor1 = refactor2 := by
 --   simp
 
+structure Pos where
+  succ::
+  pred: Nat
+deriving Repr
+
+partial def Pos.plus (a:Pos) (b:Pos) : Pos :=
+  match b.pred with
+  | 0 => Pos.succ (Nat.succ a.pred)
+  --| n + 1 => Pos.succ (Nat.succ b.pred)
+  | Nat.succ n => Pos.plus (Pos.succ (Nat.succ a.pred)) (Pos.succ n)
+
+
+instance : Add Pos where
+  add := Pos.plus
+
+instance : OfNat Pos (n+1) where
+  ofNat := Pos.succ n
+
+#eval Pos.plus (Pos.succ 13) (Pos.succ 11)
+
+def pp: Pos := 1
+
+#eval pp
+
 #eval Nat.succ 42
 
 #eval maximum 42 13
