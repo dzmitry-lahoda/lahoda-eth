@@ -24,3 +24,8 @@ Lean does not have throwing exception as part of language.
 `do` is used to model interaction with the world.
 
 Lean evaluates `IO` function, and returns them from main for execution.
+
+Class is implemented by instances. Instances are stuctures. 
+To define class instance requried, use `[...]` syntax.
+Things within square brackets are called `instance implciits`
+.
